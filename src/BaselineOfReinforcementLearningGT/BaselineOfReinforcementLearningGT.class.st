@@ -10,8 +10,8 @@ BaselineOfReinforcementLearningGT >> baseline: spec [
 
 	spec for: #'common' do: [
 		spec 
-			package: #'ReinforcementLearning'.
+			package: #'ReinforcementLearningGT'.
 		spec 
-			group: 'default' with: #( 'ReinforcementLearning' ). ].
+			group: 'default' with: #( 'ReinforcementLearningGT' ). ].
 
 ]
