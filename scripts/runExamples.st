@@ -1,6 +1,6 @@
 Metacello new
 	baseline: 'ReinforcementLearningGT';
-	repository: 'github://bergel/ReinforcementLearningGT/src:main';
+	repository: 'github://bergel/ReinforcementLearningGT:main';
 	load.
 
 path := '/tmp/result.txt'.
