@@ -58,15 +58,20 @@ RL >> epsilon: aFloat [
 { #category : #accessing }
 RL >> gtQTableFor: aView [
 	<gtView>
-	
+	| tt b |
+	b := [ :aValue |
+				tt := aValue round: 2.
+				(tt > 0) 
+					ifTrue: [ tt asString asRopedText foreground: Color green darker darker ]
+					ifFalse: [ tt asString asRopedText foreground: Color red ] ].
 	^ aView columnedList
 		title: 'QTable';
 		items: [ qTable associations ];
 		column: 'State' text: #key;
-		column: '^' text: [ :assoc | (assoc value first round: 2) asString asRopedText foreground: Color red ];
-		column: 'V' text: [ :assoc | assoc value second round: 2 ];
-		column: '<' text: [ :assoc | assoc value third round: 2 ];
-		column: '>' text: [ :assoc | assoc value fourth round: 2 ]
+		column: '^' text: [ :assoc | b value: assoc value first ] ;
+		column: 'V' text: [ :assoc | b value: assoc value second ];
+		column: '<' text: [ :assoc | b value: assoc value third ];
+		column: '>' text: [ :assoc | b value: assoc value fourth ]
 ]
 
 { #category : #accessing }
