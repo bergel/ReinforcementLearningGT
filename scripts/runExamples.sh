@@ -2,7 +2,7 @@ curl -L https://dl.feenk.com/scripts/linux.sh | bash
 
 cd glamoroustoolkit
 cp ../scripts/runExamples.st .
-./glamoroustoolkit --headless GlamorousToolkit.image runG.st
+./glamoroustoolkit --headless GlamorousToolkit.image runExamples.st
 
 cat /tmp/result.txt
 if grep -q Error "/tmp/result.txt"; then
