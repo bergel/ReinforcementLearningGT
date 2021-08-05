@@ -1,6 +1,7 @@
 curl -L https://dl.feenk.com/scripts/linux.sh | bash
 
 cd glamoroustoolkit
+ls
 cp ../scripts/runExamples.st .
 ./glamoroustoolkit --headless GlamorousToolkit.image runExamples.st
 
